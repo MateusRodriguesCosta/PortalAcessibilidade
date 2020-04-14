@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Http;
+using PortalAcessibilidade.Models.Dao;
+using Microsoft.EntityFrameworkCore;
 
 namespace PortalAcessibilidade
 {
@@ -24,6 +27,9 @@ namespace PortalAcessibilidade
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<PortalDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PortalBD")));
+            services.AddTransient<AtividadeDao>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

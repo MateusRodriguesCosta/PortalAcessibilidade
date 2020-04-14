@@ -2,7 +2,13 @@
     ViewData["Title"] = "Principal";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bem Vindo</h1>
-    <p>Primeira vez na plataforma? <a href="https://docs.microsoft.com/aspnet/core">Clique aqui e veja como tudo funciona</a>.</p>
-</div>
+    <div class="text-center">
+        <h1 class="display-4">Bem Vindo</h1>
+        <p>Primeira vez na plataforma? <a href="https://docs.microsoft.com/aspnet/core">Clique aqui e veja como tudo funciona</a>.</p>
+        @*
+        @foreach (Atividade atividade in Model)
+        {
+            <partial name="_DisplayAtividade" model="atividade" />
+        }*@
+
+    </div>

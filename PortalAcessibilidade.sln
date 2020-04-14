@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29911.84
+VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalAcessibilidade", "PortalAcessibilidade.csproj", "{DE62DCA4-2B17-4A67-860B-821AD58F7AA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalAcessibilidade", "PortalAcessibilidade.csproj", "{30A2A703-92DA-4B96-9EB3-20EE6B5F03CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DE62DCA4-2B17-4A67-860B-821AD58F7AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE62DCA4-2B17-4A67-860B-821AD58F7AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE62DCA4-2B17-4A67-860B-821AD58F7AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE62DCA4-2B17-4A67-860B-821AD58F7AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30A2A703-92DA-4B96-9EB3-20EE6B5F03CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A2A703-92DA-4B96-9EB3-20EE6B5F03CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A2A703-92DA-4B96-9EB3-20EE6B5F03CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A2A703-92DA-4B96-9EB3-20EE6B5F03CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {780D4F20-94DE-44EC-A32F-35E8A99D9AC4}
+		SolutionGuid = {1986DCDA-7A09-4F4C-AB4A-8CCA8D6B05C7}
 	EndGlobalSection
 EndGlobal
