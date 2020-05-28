@@ -1,0 +1,19 @@
+﻿@model Atividade
+    
+        <div class="col-md-4" style="margin-bottom: 15px;">
+            <div class="card h-100">
+                <div class="card-header"><h3>@Model.Area</h3></div>
+
+                <img class="card-img-top" src="~/Images/Atividades/@Model.Area/@Model.Thumbnail" asp-append-version="true" />
+
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Nome</h5>
+                    <p class="card-text">@Model.Resumo</p>
+                    <a asp-controller="Atividade" asp-action="AtividadeInfo" asp-route-id="@Model.Id" class="btn btn-primary">Acessar</a>
+                </div>
+
+                <div class="card-footer">
+                    <small class="text-muted">Recomendação: @Model.IdadeInicial a @Model.IdadeFinal anos</small>                    
+                </div>
+            </div>            
+        </div>

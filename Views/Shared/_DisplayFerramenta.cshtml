@@ -1,0 +1,19 @@
+﻿@model Ferramenta
+    
+        <div class="col-md-4" style="margin-bottom: 15px;">
+            <div class="card h-100">
+                <div class="card-header"><h3>@Model.Nome</h3></div>
+
+                <img class="card-img-top" src="~/Images/Atividades/@Model.Atividade.Area/Ferramentas/@Model.Thumbnail" asp-append-version="true" />
+
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Tipo</h5>
+                    <p class="card-text text-justify">@Model.Resumo</p>
+                    <a asp-controller="Atividade" asp-action="AtividadeInfo" asp-route-id="@Model.Id" class="btn btn-primary">Iniciar</a>
+                </div>
+
+                <div class="card-footer">
+                    <small class="text-muted">Atualizado há 1h </small>                    
+                </div>
+            </div>            
+        </div>

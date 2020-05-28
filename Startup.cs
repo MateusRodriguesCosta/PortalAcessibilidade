@@ -29,6 +29,7 @@ namespace PortalAcessibilidade
             services.AddControllersWithViews();
             services.AddDbContext<PortalDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PortalBD")));
             services.AddTransient<AtividadeDao>();
+            services.AddTransient<FerramentaDao>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 

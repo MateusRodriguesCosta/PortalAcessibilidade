@@ -32,7 +32,9 @@ namespace PortalAcessibilidade.Controllers
                 Tipo = ""
             };
 
-            Atividades.Adicionar(atividade);
+            //Atividades.Adicionar(atividade);
+
+            ViewData.Model = Atividades.Listar();
 
             return View();
         }

@@ -8,6 +8,8 @@ namespace PortalAcessibilidade
     {
         public DbSet<Atividade> Atividades { get; set; }
 
+        public DbSet<Ferramenta> Ferramentas { get; set; }
+
         public PortalDbContext(DbContextOptions<PortalDbContext> options) : base(options) {}
     }
 

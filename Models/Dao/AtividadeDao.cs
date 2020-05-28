@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PortalAcessibilidade.Models.Dao
@@ -27,7 +28,12 @@ namespace PortalAcessibilidade.Models.Dao
 
         public Atividade Procurar(Atividade atividade)
         {
-            return context.Atividades.Where(a => a.Equals(atividade)).FirstOrDefault<Atividade>();
+            return context.Atividades.Where(a => a.Equals(atividade)).Include(a => a.Ferramentas).FirstOrDefault<Atividade>();
+        }
+
+        public Atividade Procurar(int? id)
+        {
+            return context.Atividades.Where(a => a.Id.Equals(id)).Include(a => a.Ferramentas).FirstOrDefault<Atividade>();
         }
 
         public void Remover(Atividade atividade)
@@ -36,9 +42,9 @@ namespace PortalAcessibilidade.Models.Dao
             context.SaveChanges();
         }
 
-        public IList<Atividade> Listar(Atividade atividade)
+        public IList<Atividade> Listar()
         {
-            return context.Atividades.Where(a => a.Equals(atividade)).ToList();
+            return context.Atividades.Include(a => a.Ferramentas).ToList();
         }
        
     }

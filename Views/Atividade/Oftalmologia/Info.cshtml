@@ -1,0 +1,38 @@
+﻿@model Atividade
+@{
+    ViewData["Title"] = Model.Area;
+}
+
+<div class="text-right">
+    <h1 class="display-4">@Model.Area</h1>
+    <p>@Model.Nome</p>
+</div>
+
+<div class="row">
+    <h1 class="display-4">Descrição</h1>
+</div>
+<div class="row text-muted">
+    <h6 class="mr-4">
+        <i class="oi oi-clock" aria-hidden="true"></i>
+        <span> @Model.IdadeInicial a @Model.IdadeFinal anos</span>
+    </h6>
+    <h6 class="mr-4">
+        <i class="oi oi-eye" aria-hidden="true"></i>
+        <span>@Model.Sintomas</span>
+    </h6>
+    <h6>
+        <i class="oi oi-project" aria-hidden="true"></i>
+        <span>@Model.Diagnostico</span>
+    </h6>
+</div>
+<div class="row text-justify">
+    <p>
+        @Model.Descricao
+    </p>
+</div>
+<div class="row">
+    @foreach (Ferramenta ferramenta in Model.Ferramentas)
+    {
+        <partial name="_DisplayFerramenta" model="ferramenta" />
+    }
+</div>
