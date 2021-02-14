@@ -1,0 +1,31 @@
+﻿@model Ferramenta
+@{
+    ViewData["Title"] = Model.Tipo + Model.Nome;
+}
+
+<div class="text-right">
+    <h1 class="display-4">@Model.Nome</h1>
+    <p>@Model.Tipo</p>
+</div>
+
+<div class="row">
+    <h1 class="display-4">Instruções</h1>
+</div>
+<div class="row text-muted">    
+    <h6 class="mr-4">
+        <i class="oi oi-eye" aria-hidden="true"></i>
+        <span> Não é necessário acompanhamento Profissional</span>
+    </h6>
+    <h6>
+        <i class="oi oi-project" aria-hidden="true"></i>
+        <span> Resultado com grau e tipo</span>
+    </h6>
+</div>
+<div class="row text-justify">
+    <p>
+        @Model.Descricao
+    </p>
+</div>
+<div class="row">     
+    <partial name="Oftalmologia/Ferramentas/Shared/_IshiharaTeste" model="Model" />
+</div>

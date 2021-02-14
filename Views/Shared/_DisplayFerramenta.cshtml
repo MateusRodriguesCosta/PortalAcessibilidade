@@ -9,7 +9,8 @@
                 <div class="card-body">
                     <h5 class="card-title">@Model.Tipo</h5>
                     <p class="card-text text-justify">@Model.Resumo</p>
-                    <a asp-controller="Atividade" asp-action="AtividadeInfo" asp-route-id="@Model.Id" class="btn btn-primary">Iniciar</a>
+                    <a asp-controller="Atividade" asp-action="FerramentaIniciar" asp-route-id="@Model.Id" class="btn btn-primary">Iniciar</a>
+                    <a asp-controller="Atividade" asp-action="FerramentaResultados" asp-route-id="@Model.Id" class="btn btn-primary">Resultados</a>
                 </div>
 
                 <div class="card-footer">

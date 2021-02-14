@@ -33,6 +33,20 @@ namespace PortalAcessibilidade.Controllers
             return View("Oftalmologia/Info", Atividades.Procurar(id));
         }
 
+        public IActionResult FerramentaIniciar(int? id)
+        {
+            Ferramenta ferramenta = Ferramentas.Procurar(id);
+
+            return View("Oftalmologia/Ferramentas/" + ferramenta.Nome, ferramenta);
+        }
+
+        public IActionResult FerramentaResultados(int? id)
+        {
+            Ferramenta ferramenta = Ferramentas.Procurar(id);
+
+            return View("Oftalmologia/Ferramentas/Resultados", ferramenta);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
